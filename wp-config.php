@@ -16,8 +16,8 @@ $table_prefix = 'wp_';
 define('WP_DEBUG', false);
 
 // WordPress URLs
-define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'https://wordpress-yen-ne-a4b3e45c4773.herokuapp.com' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'https://wordpress-yen-ne-a4b3e45c4773.herokuapp.com' . $_SERVER['HTTP_HOST']);
 
 // Security keys (đổi thành của riêng bạn tại: https://api.wordpress.org/secret-key/1.1/salt/)
 define('AUTH_KEY',         '>!_^J*n8sYISA3/niGAc~p&7k5|52 Z1f/)_PTFT$[u.Q||Yx-?DOp/4(6g_nziP');
@@ -34,12 +34,18 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__FILE__) . '/');
 }
 
+
+// Thiết lập biến môi trường để WordPress biết đây là môi trường HTTPS
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
 // Tải file cấu hình cốt lõi của WordPress
-require_once(ABSPATH . 'wp-settings.php');
+require_once(ABSPATH . 'wp-setting.php');
 // Absolute path to WordPress directory
 if (!defined('ABSPATH')) {
     define('ABSPATH', dirname(__FILE__) . '/');
 }
 
-require_once(ABSPATH . 'wp-settings.php');
+require_once(ABSPATH . 'wp-setting.php');
 ?>
