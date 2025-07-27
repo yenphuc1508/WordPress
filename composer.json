@@ -1,0 +1,10 @@
+{
+    "require": {
+        "php": "^8.0",
+        "ext-gd": "*",
+        "ext-mbstring": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "."
+    }
+}
