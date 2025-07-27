@@ -2,12 +2,12 @@
 // Lấy URL database từ biến môi trường JAWSDB_URL
 $db = parse_url(getenv("JAWSDB_URL"));
 
-define('m8cvtybcqe0trgwt', ltrim($db["path"], "/"));
-define('n7mvz006pabpwjg8', $db["user"]);
-define('cagyumfb0ogt4eue', $db["pass"]);
-define('ocvwlym0zv3tcn68.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', $db["host"] . ':' . $db["port"]);
-define('DB_CHARSET', 'utf8');
-define('DB_COLLATE', '');
+define('DB_NAME',     ltrim($db["path"], '/'));
+define('DB_USER',     $db["user"]);
+define('DB_PASSWORD', $db["pass"]);
+define('DB_HOST',     $db["host"] . ':' . $db["port"]);
+define('DB_CHARSET',  'utf8');
+define('DB_COLLATE',  '');
 
 // WordPress Database Table prefix
 $table_prefix = 'wp_';
