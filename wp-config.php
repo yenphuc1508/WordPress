@@ -16,8 +16,8 @@ $table_prefix = 'wp_';
 define('WP_DEBUG', false);
 
 // WordPress URLs
-define('WP_HOME', 'https://wordpress-yen-ne-a4b3e45c4773.herokuapp.com' . $_SERVER['HTTP_HOST']);
-define('WP_SITEURL', 'https://wordpress-yen-ne-a4b3e45c4773.herokuapp.com' . $_SERVER['HTTP_HOST']);
+define('WP_HOME', 'https://' . $_SERVER['HTTP_HOST']);
+define('WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST']);
 
 // Security keys (đổi thành của riêng bạn tại: https://api.wordpress.org/secret-key/1.1/salt/)
 define('AUTH_KEY',         '>!_^J*n8sYISA3/niGAc~p&7k5|52 Z1f/)_PTFT$[u.Q||Yx-?DOp/4(6g_nziP');
