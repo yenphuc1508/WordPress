@@ -35,10 +35,6 @@ if (!defined('ABSPATH')) {
 }
 
 
-// Thiết lập biến môi trường để WordPress biết đây là môi trường HTTPS
-if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
-    $_SERVER['HTTPS'] = 'on';
-}
 
 // Tải file cấu hình cốt lõi của WordPress
 require_once(ABSPATH . 'wp-setting.php');
